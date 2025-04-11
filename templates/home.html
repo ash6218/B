@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 
 {% block c1 %}
+
+    {% for i in form1 %}
+        <a class="btn btn-primary" href= "/detail/{{i.id}}/" role="button">{{i.title}}</a>
+    {% endfor %}
+
     {% for i in form1 %}
         <h2> {{i.title}} </h2>
         <h4> {{i.body}} </h4>
-        <h5> {{i.created}} </h5>
+        <h5> {{i.created}} </h5> <br>
     {% endfor %}
 {% endblock %}
