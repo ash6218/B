@@ -1,5 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head> hello dear {{name1|upper}} </head>
+{% extends 'base.html' %}
 
-</html>
+{% block c1 %}
+    {% for i in form1 %}
+        <h2> {{i.title}} </h2>
+        <h4> {{i.body}} </h4>
+        <h5> {{i.created}} </h5>
+    {% endfor %}
+{% endblock %}
