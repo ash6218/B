@@ -14,5 +14,5 @@ def detail(request, todo_id):
     return render(request, 'detail.html', {'form2':form2})
 
 def delete(request, todo_id):
-    form2 = Todo.objects.get(id= todo_id).delete()
+    Todo.objects.get(id= todo_id).delete()
     return redirect('home')
